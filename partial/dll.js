@@ -9,6 +9,11 @@ module.exports = function() {
         path: '[name]-manifest.json',
         name: '[name]_library'
       }),
+      new webpack.BannerPlugin({
+        banner: 'console.warn("This script is development version.");',
+        raw: true,
+        entryOnly: true
+      })
     ],
     performance: {
       hints: false

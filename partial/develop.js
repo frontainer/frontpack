@@ -11,13 +11,7 @@ module.exports = function() {
           'NODE_ENV': JSON.stringify('development')
         }
       }),
-      new webpack.HotModuleReplacementPlugin(),
-      new webpack.BannerPlugin({
-        banner: 'console.warn("This script is development version.");',
-        raw: true,
-        entryOnly: true,
-        exclude: [/^(?!.*vendor\.(js|ts)x?$).+$/]
-      })
+      new webpack.HotModuleReplacementPlugin()
     ]
   };
   try {
