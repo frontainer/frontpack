@@ -63,6 +63,6 @@
     "rimraf": "2.5.4"
   },
   "peerDependencies": {
-    "webpack": "2"
+    "webpack": "^2.2.0-rc.0 || ^2.2"
   }
 }
