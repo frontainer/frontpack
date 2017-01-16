@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+@import 'setting';
+//@import 'base/sanitize';
+//@import 'base/reset';
+//@import 'base/normalize';
+@import 'base/mixin';
+@import 'base/base';
+@import 'layout/layout';
+@import 'sprites/sprites';
+
+.icon-home {
+   @include sprite($web-navigation-line-craft-1-109681);
+ }

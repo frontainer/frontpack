@@ -1,0 +1,31 @@
+{
+  "name": "frontpack-standard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run serve",
+    "build": "webpack",
+    "serve": "npm run dll && webpack-dev-server",
+    "serve:prod": "NODE_ENV='production' webpack-dev-server -p",
+    "production": "NODE_ENV='production' webpack -p",
+    "test": "karma start",
+    "dll": "webpack --config webpack.dll.config.js",
+    "map": "source-map-explorer public/assets/js/main.js public/assets/js/main.js.map"
+  },
+  "author": "frontainer",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "frontpack": "file:///Users/frontainer/Documents/project/frontpack",
+    "jasmine": "2.5.2",
+    "karma": "1.3.0",
+    "karma-jasmine": "1.1.0",
+    "karma-mocha-reporter": "2.2.1",
+    "karma-phantomjs-launcher": "1.0.2",
+    "karma-webpack": "2.0.1",
+    "source-map-explorer": "1.3.3",
+    "webpack": "2.2.0-rc.6",
+    "webpack-dev-server": "2.2.0-rc.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "vendor_library",
+  "content": {
+    "./src/assets/js/vendor.js": {
+      "id": 0,
+      "meta": {}
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "frontpack-angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run serve",
+    "build": "webpack",
+    "serve": "npm run dll && webpack-dev-server",
+    "serve:prod": "npm run aot && NODE_ENV='production' webpack-dev-server -p",
+    "production": "npm run aot && NODE_ENV='production' webpack -p",
+    "test": "karma start",
+    "dll": "webpack --config webpack.dll.config.js",
+    "map": "source-map-explorer public/assets/js/main.js public/assets/js/main.js.map",
+    "pree2e": "webdriver-manager update",
+    "e2e": "protractor -p protractor.conf.js",
+    "aot": "ngc -p tsconfig.json"
+  },
+  "author": "frontainer",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "^2.4.3",
+    "@angular/compiler": "^2.4.3",
+    "@angular/core": "^2.4.3",
+    "@angular/forms": "^2.4.3",
+    "@angular/http": "^2.4.3",
+    "@angular/platform-browser": "^2.4.3",
+    "@angular/platform-browser-dynamic": "^2.4.3",
+    "@angular/router": "^3.4.3",
+    "core-js": "2.4.1",
+    "rxjs": "^5.0.3",
+    "zone.js": "^0.7.4"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "^2.4.3",
+    "@types/jasmine": "^2.5.40",
+    "@types/node": "6.0.42",
+    "codelyzer": "2.0.0-beta.4",
+    "frontpack": "file:///Users/frontainer/Documents/project/frontpack",
+    "jasmine": "2.5.2",
+    "jasmine-spec-reporter": "3.1.0",
+    "karma": "1.3.0",
+    "karma-jasmine": "1.1.0",
+    "karma-mocha-reporter": "2.2.1",
+    "karma-phantomjs-launcher": "1.0.2",
+    "karma-webpack": "2.0.1",
+    "protractor": "^4.0.14",
+    "source-map-explorer": "1.3.3",
+    "ts-node": "2.0.0",
+    "webpack": "2.2.0-rc.6",
+    "webpack-dev-server": "2.2.0-rc.0"
+  }
+}
