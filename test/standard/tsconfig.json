@@ -21,11 +21,11 @@
   },
   "compileOnSave": true,
   "files": [
-    "src/vendor.ts",
-    "src/main.ts"
+    "src/assets/js/vendor.ts",
+    "src/assets/js/main.ts"
   ],
   "include": [
-    "src/**/*.module.ts"
+    "src/assets/**/*.module.ts"
   ],
   "exclude": [
     "node_modules"

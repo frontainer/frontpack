@@ -3,3 +3,4 @@ src/aot-compiled
 vendor-manifest.json
 .awcache
 .idea
+phantomjsdriver.log
