@@ -6,6 +6,7 @@ const partials = [
   'html',
   'server',
   'copy',
+  'sprite',
   process.env.NODE_ENV === 'production' ? 'production' : 'develop'
 ];
 module.exports = function(fp) {
