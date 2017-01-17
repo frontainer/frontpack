@@ -1,6 +1,7 @@
 'use strict';
 
 const webpack = require('webpack');
+const webpackMerge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const DEFAULT_OPTIONS = {
@@ -8,28 +9,21 @@ const DEFAULT_OPTIONS = {
     {
       inject: true,
       filename: 'index.html',
-      template: './src/index.ejs',
+      template: './src/index.ejs'
     }
   ],
-  params: {
-    isProduction: (process.env.NODE_ENV === 'production')
-  }
+  params: {}
 };
 
 module.exports = function(options = {}) {
-  const op = Object.assign({
+  const op = webpackMerge({
     params: {}
   },DEFAULT_OPTIONS,options);
   const plugins = op.files.map((file) => {
+    file.isProduction = (process.env.NODE_ENV === 'production')
+    file.params = webpackMerge({}, file.params,op.params);
     return new HtmlWebpackPlugin(file);
   });
-  plugins.push(new webpack.LoaderOptionsPlugin({
-    options: {
-      ejsHtml: {
-        context: options.params
-      }
-    }
-  }));
 
   return {
     module: {
@@ -42,7 +36,7 @@ module.exports = function(options = {}) {
         {
           test: /\.ejs$/,
           exclude: /node_modules/,
-          loaders: ['ejs-compiled-loader']
+          loader: 'ejs-compiled-loader'
         }
       ]
     },

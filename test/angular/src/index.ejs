@@ -24,6 +24,6 @@
 </head>
 <body>
 <my-app>Loading...</my-app>
-<% if (!this.isProduction) {%><script src="assets/js/vendor.js"></script><% } %>
+<% if (!htmlWebpackPlugin.options.isProduction) {%><script src="/assets/js/vendor.js"></script><% } %>
 </body>
 </html>
