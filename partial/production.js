@@ -1,11 +1,28 @@
 'use strict';
 
 const webpack = require('webpack');
+const webpackMerge = require('webpack-merge');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-module.exports = function() {
+const DEFAULT_OPTIONS = {
+  clean: {
+    path: ['public'],
+    options: {
+      root: process.cwd(),
+    }
+  },
+  uglify: {
+    compress: {
+      warnings: false
+    },
+    comments: false,
+    sourceMap: true
+  }
+};
+module.exports = function(options) {
+  options = webpackMerge({},DEFAULT_OPTIONS,options);
   return {
     plugins: [
-      new CleanWebpackPlugin(['public'],{}),
+      new CleanWebpackPlugin(options.clean.path,options.clean.options),
       new webpack.DefinePlugin({
         'process.env': {
           'NODE_ENV': JSON.stringify('production')
@@ -13,13 +30,7 @@ module.exports = function() {
       }),
       new webpack.optimize.AggressiveMergingPlugin(),
       new webpack.optimize.OccurrenceOrderPlugin(),
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: false
-        },
-        comments: false,
-        sourceMap: true
-      })
+      new webpack.optimize.UglifyJsPlugin(options.uglify)
     ]
   }
 };
