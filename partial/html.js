@@ -42,7 +42,7 @@ module.exports = function(options = {}) {
         {
           test: /\.ejs$/,
           exclude: /node_modules/,
-          loaders: ['html-loader', 'ejs-html-loader']
+          loaders: ['ejs-compiled-loader']
         }
       ]
     },
