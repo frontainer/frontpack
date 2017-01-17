@@ -6,18 +6,29 @@ const webpackMerge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const DEFAULT_OPTIONS = {
-  sourceMap: true,
-  importLoaders: true,
-  localIdentName: '[name]-[local]-[hash:base64:5]',
-  'import': true,
-  url: true
+  sass: {
+    sourceMap: true,
+    importLoaders: true,
+    localIdentName: '[name]-[local]-[hash:base64:5]',
+    'import': true,
+    url: true
+  },
+  file: {
+    name : '[path][name].[ext]',
+    context: './src'
+  }
 };
 const autoprefixer = require('autoprefixer');
 
+function objectToQuery(obj) {
+  if(!obj) return {};
+  return Object.keys(obj).map(k => `${encodeURIComponent(k)}=${encodeURIComponent(obj[k])}`).join('&');
+}
+
 module.exports = function (options) {
   options = webpackMerge({}, DEFAULT_OPTIONS, options);
-
-  let query = Object.keys(options).map(k => `${encodeURIComponent(k)}=${encodeURIComponent(options[k])}`).join('&');
+  let cssQuery = objectToQuery(options.sass);
+  let fileQuery = objectToQuery(options.file);
   return {
     module: {
       rules: [
@@ -27,7 +38,7 @@ module.exports = function (options) {
           loader: ExtractTextPlugin.extract({
             fallbackLoader: 'style-loader',
             loader: [
-              `css-loader?${query}`, // CSS Moduleの場合 &modules をつける
+              `css-loader?${cssQuery}`, // CSS Moduleの場合 &modules をつける
               'postcss-loader',
               'sass-loader'
             ]
@@ -35,7 +46,7 @@ module.exports = function (options) {
         },
         {
           test: /\.(ttf|woff2?|eot|svg|gif|jpg|png)$/,
-          loader: 'file-loader?name=[path][name].[ext]&context=./src'
+          loader: `file-loader?${fileQuery}`
         }
       ]
     },

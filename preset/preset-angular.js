@@ -1,6 +1,6 @@
 const partials = [
   'common',
-  'sass',
+  'style',
   'typescript',
   'babel',
   'html',
