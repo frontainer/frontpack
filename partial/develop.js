@@ -2,7 +2,6 @@
 
 const path = require('path');
 const webpack = require('webpack');
-const WriteFilePlugin = require('write-file-webpack-plugin');
 module.exports = function() {
   let config = {
     plugins: [
@@ -11,8 +10,7 @@ module.exports = function() {
           'NODE_ENV': JSON.stringify('development')
         }
       }),
-      new webpack.HotModuleReplacementPlugin(),
-      new WriteFilePlugin()
+      new webpack.HotModuleReplacementPlugin()
     ]
   };
   try {
