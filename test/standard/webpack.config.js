@@ -15,6 +15,9 @@ const config = fp
       ]
     }
   }).option({
+    copy: [],
+    options: {
 
+    }
   }).export();
 module.exports = config;

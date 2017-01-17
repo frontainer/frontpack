@@ -21,7 +21,7 @@ const config = fp
       historyApiFallback: true
     }
   }).option({
-    options: {
-    }
+    copy: [],
+    options: {}
   }).export();
 module.exports = config;
