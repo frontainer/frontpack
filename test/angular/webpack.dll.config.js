@@ -9,5 +9,12 @@ const config = fp
     entry: {
       vendor: ['./src/vendor']
     }
+  }).option({
+    babel: {
+      lint: false
+    },
+    typescript: {
+      lint: false
+    },
   }).export();
 module.exports = config;

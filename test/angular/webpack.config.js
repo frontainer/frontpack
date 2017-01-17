@@ -21,6 +21,9 @@ const config = fp
       historyApiFallback: true
     }
   }).option({
+    babel: {
+      lint: false
+    },
     copy: [],
     options: {}
   }).export();

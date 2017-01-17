@@ -1,16 +1,15 @@
 'use strict';
 
 const webpack = require('webpack');
-module.exports = function() {
-  return {
+const webpackMerge = require('webpack-merge');
+const DEFAULT_OPTIONS = {
+  lint: true
+};
+module.exports = function(options) {
+  options = webpackMerge({}, DEFAULT_OPTIONS, options);
+  const config = {
     module: {
       rules: [
-        {
-          test: /\.tsx?$/,
-          exclude: /node_modules/,
-          loader: 'tslint-loader',
-          enforce: 'pre'
-        },
         {
           test: /\.ts/,
           loader: 'awesome-typescript-loader'
@@ -28,4 +27,13 @@ module.exports = function() {
       })
     ]
   };
+  if (options.lint) {
+    config.module.rules.push({
+      test: /\.tsx?$/,
+      exclude: /node_modules/,
+      loader: 'tslint-loader',
+      enforce: 'pre'
+    });
+  }
+  return config;
 };

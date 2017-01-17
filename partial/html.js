@@ -20,7 +20,7 @@ module.exports = function(options = {}) {
     params: {}
   },DEFAULT_OPTIONS,options);
   const plugins = op.files.map((file) => {
-    file.isProduction = (process.env.NODE_ENV === 'production')
+    file.isProduction = (process.env.NODE_ENV === 'production');
     file.params = webpackMerge({}, file.params,op.params);
     return new HtmlWebpackPlugin(file);
   });
