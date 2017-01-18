@@ -89,3 +89,10 @@ frontpack.load
 
 ... todo
 
+
+## ToDo
+
+- update documentation
+- preset package
+- partial package
+- preset for react
