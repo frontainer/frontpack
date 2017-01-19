@@ -1,0 +1,18 @@
+{
+  "name": "@frontpack/frontpack-preset-common",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "frontainer",
+  "license": "MIT",
+  "dependencies": {
+    "clean-webpack-plugin": "0.1.15"
+  },
+  "peerDependencies": {
+    "webpack": "^2",
+    "webpack-merge": "^2"
+  }
+}
