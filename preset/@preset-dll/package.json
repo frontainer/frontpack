@@ -11,6 +11,6 @@
   "dependencies": {
   },
   "peerDependencies": {
-    "webpack": "^2"
+    "frontpack": "*"
   }
 }

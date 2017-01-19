@@ -16,7 +16,6 @@
     "eslint-loader": "1.6.1"
   },
   "peerDependencies": {
-    "webpack": "^2",
-    "webpack-merge": "^2"
+    "frontpack": "*"
   }
 }

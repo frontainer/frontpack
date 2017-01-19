@@ -15,6 +15,6 @@
     "ejs-compiled-loader": "2.2.0"
   },
   "peerDependencies": {
-    "webpack-merge": "^2"
+    "frontpack": "*"
   }
 }

@@ -19,6 +19,6 @@
     "sass-loader": "4.1.1"
   },
   "peerDependencies": {
-    "webpack": "^2"
+    "frontpack": "*"
   }
 }
