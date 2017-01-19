@@ -10,7 +10,7 @@ const autoprefixer = require('autoprefixer');
 const DEFAULT_OPTIONS = {
   sass: {
     sourceMap: true,
-    importLoaders: true,
+    importLoaders: 1,
     localIdentName: '[name]-[local]-[hash:base64:5]',
     'import': true,
     url: true
@@ -49,12 +49,11 @@ module.exports = function (options = {}) {
     plugins: [
       new webpack.LoaderOptionsPlugin({
         options: {
-          context: process.cwd(),
           sassLoader: {
             sourceMap: true,
             includePaths: [
-              path.resolve(process.cwd(), 'node_modules'),
-              path.resolve(process.cwd(), './src/assets/css'),
+              path.join(process.cwd(), 'node_modules'),
+              path.join(process.cwd(), './src/assets/css'),
             ]
           },
           postcss: {
