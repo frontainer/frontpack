@@ -5,8 +5,9 @@ const webpackMerge = require('webpack-merge');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const DEFAULT_OPTIONS = {
+  outputPath: 'public',
   clean: {
-    path: ['public'],
+    path: [],
     options: {
       root: process.cwd(),
     }
@@ -17,11 +18,6 @@ const DEFAULT_OPTIONS = {
     },
     comments: false,
     sourceMap: true
-  },
-  browserSync: {
-    server: {
-      baseDir: ['public']
-    }
   }
 };
 module.exports = function (options = {}) {
@@ -30,7 +26,7 @@ module.exports = function (options = {}) {
   const config = {
     devtool: '#source-map',
     output: {
-      path: path.join(process.cwd(), 'public'),
+      path: path.join(process.cwd(), options.outputPath),
       publicPath: '/',
       filename: "assets/js/[name].js",
       jsonpFunction: 'fr',
@@ -52,7 +48,7 @@ module.exports = function (options = {}) {
     },
     devServer: {
       publicPath: '/',
-      contentBase: path.join(process.cwd(),'public'),
+      contentBase: path.join(process.cwd(),options.outputPath),
       hot: (env !== 'production'),
       open: true,
       historyApiFallback: false, // SPA作るときはtrueに
@@ -69,6 +65,7 @@ module.exports = function (options = {}) {
   };
 
   if (env === 'production') { // for production
+    options.clean.path.push(options.outputPath);
     config.plugins.push(
       new CleanWebpackPlugin(options.clean.path, options.clean.options),
       new webpack.optimize.AggressiveMergingPlugin(),
