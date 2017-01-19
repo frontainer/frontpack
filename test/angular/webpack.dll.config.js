@@ -3,8 +3,11 @@ const frontpack = require('frontpack');
 
 const fp = new frontpack();
 const config = fp
-  .preset('dll')
-  .load(['angular'])
+  .preset([
+    'common',
+    'typescript',
+    'dll'
+  ])
   .config({
     entry: {
       vendor: ['./src/vendor']

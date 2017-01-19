@@ -6,7 +6,14 @@ const fp = new frontpack({
 });
 
 const config = fp
-  .preset('angular')
+  .preset([
+    'common',
+    'style',
+    'typescript',
+    'html',
+    'copy',
+    'angular'
+  ])
   .config({
     entry: {
       main: process.env.NODE_ENV === 'production' ? [
@@ -21,9 +28,6 @@ const config = fp
       historyApiFallback: true
     }
   }).option({
-    babel: {
-      lint: false
-    },
     copy: [],
     options: {}
   }).export();

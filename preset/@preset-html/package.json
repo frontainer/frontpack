@@ -1,0 +1,20 @@
+{
+  "name": "@frontpack/frontpack-preset-html",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "frontainer",
+  "license": "MIT",
+  "dependencies": {
+    "html-webpack-plugin": "2.26.0",
+    "html-loader": "0.4.4",
+    "ejs": "2.5.5",
+    "ejs-compiled-loader": "2.2.0"
+  },
+  "peerDependencies": {
+    "webpack-merge": "^2"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@frontpack/frontpack-preset-copy",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "frontainer",
+  "license": "MIT",
+  "dependencies": {
+    "copy-webpack-plugin": "4.0.1"
+  },
+  "peerDependencies": {
+  }
+}
