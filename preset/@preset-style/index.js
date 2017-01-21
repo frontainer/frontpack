@@ -69,7 +69,7 @@ module.exports = function (options = {}) {
       new ExtractTextPlugin({
         filename: 'assets/css/[name].css',
         allChunks: true,
-        disable: process.env.NODE_ENV !== 'production'
+        // disabled: process.env.NODE_ENV === 'production'
       })
     ]
   };
