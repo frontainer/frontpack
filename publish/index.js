@@ -23,8 +23,8 @@ whoami().then(() => {
   return getDirs('preset');
 }).then((list) => {
   return update(list, type);
-// }).then((list) => {
-//   return publish(list);
+}).then((list) => {
+  return publish(list);
 }).then(() => {
   console.log('Published!!');
 }).catch((e) => {

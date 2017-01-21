@@ -21,6 +21,6 @@ module.exports = function(list,type) {
   let promises = list.map((name) => {
     return update(name, type);
   });
-  // promises.push(update('.', type));
+  promises.push(update('.', type));
   return Promise.all(promises);
 };
