@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run serve",
     "build": "webpack",
-    "serve": "webpack-dev-server",
+    "serve": "webpack -w",
     "serve:prod": "NODE_ENV='production' webpack-dev-server -p",
     "production": "NODE_ENV='production' webpack -p",
     "test": "karma start",
@@ -15,7 +15,9 @@
   },
   "author": "frontainer",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  },
   "devDependencies": {
     "frontpack": "file:///Users/frontainer/Documents/project/frontpack",
     "jasmine": "2.5.2",
@@ -25,7 +27,6 @@
     "karma-phantomjs-launcher": "1.0.2",
     "karma-webpack": "2.0.1",
     "source-map-explorer": "1.3.3",
-    "webpack": "^2.2.0",
-    "webpack-dev-server": "^2.2.0"
+    "webpack": "2.2.0"
   }
 }

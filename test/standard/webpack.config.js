@@ -1,6 +1,5 @@
 'use strict';
 const frontpack = require('frontpack');
-const webpack = require('webpack');
 const fp = new frontpack({
   debug: false
 });
@@ -12,19 +11,26 @@ const config = fp
     'babel',
     'html',
     'copy',
-    'sprite'
+    'sprite',
+    'server'
   ])
   .config({
     entry: {
       main: [
-        './src/assets/js/main.js'
-      ],
-      style: [
+        './src/assets/js/main.js',
         './src/assets/css/style.scss'
       ]
-    }
+    },
+    plugins: [
+    ]
   }).option({
-    copy: [],
+    copy: {
+      files: [
+        {
+          from: 'src/assets/lib/**/*'
+        }
+      ]
+    },
     options: {
 
     }
