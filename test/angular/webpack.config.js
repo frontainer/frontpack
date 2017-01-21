@@ -12,7 +12,8 @@ const config = fp
     'typescript',
     'html',
     'copy',
-    'angular'
+    'angular',
+    'server'
   ])
   .config({
     entry: {
@@ -23,11 +24,11 @@ const config = fp
           './src/main',
           './src/assets/css/style.scss'
         ]
-    },
-    devServer: {
-      historyApiFallback: true
     }
   }).option({
+    server: {
+      historyApiFallback: true
+    },
     copy: [],
     options: {}
   }).export();
