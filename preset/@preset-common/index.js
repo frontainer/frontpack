@@ -46,15 +46,8 @@ module.exports = function (options = {}) {
     performance: {
       hints: false
     },
-    devServer: {
-      publicPath: '/',
-      contentBase: path.join(process.cwd(),options.outputPath),
-      hot: (env !== 'production'),
-      open: true,
-      historyApiFallback: false, // SPA作るときはtrueに
-      stats: 'minimal'
-    },
     plugins: [
+      new webpack.NoErrorsPlugin(),
       new webpack.DefinePlugin({
         'process.env': {
           'NODE_ENV': JSON.stringify(env)
@@ -80,10 +73,6 @@ module.exports = function (options = {}) {
     );
   } else {  // for development
     try {
-      config.plugins.push(
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NamedModulesPlugin()
-      );
       let manifest = require.resolve(path.join(process.cwd(), 'vendor-manifest.json'));
       config.plugins.push(new webpack.DllReferencePlugin({
         context: process.cwd(),
