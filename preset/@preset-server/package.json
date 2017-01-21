@@ -1,0 +1,23 @@
+{
+  "name": "@frontpack/frontpack-preset-server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "frontainer",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "2.18.6",
+    "browser-sync-webpack-plugin": "^1.1.3",
+    "connect-history-api-fallback": "^1.3.0"
+  },
+  "peerDependencies": {
+    "frontpack": "*"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.6",
+    "frontpack": "file:///Users/frontainer/Documents/project/frontpack"
+  }
+}
