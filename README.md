@@ -21,7 +21,14 @@ const fp = new frontpack({
 });
 
 const config = fp
-  .preset('standard')   // load from preset
+  .preset([
+    'common',
+    'babel',
+    'style',
+    'server',
+    // './my-preset/my.js',
+    // 'frontpack-external-preset'
+  ])   // load from preset
   .config({ // your webpack config
     entry: {
       main: [
@@ -29,7 +36,7 @@ const config = fp
         './src/assets/css/style.scss'
       ]
     }
-  }).option({
+  }).option({   // preset options
     copy: [],   // copy {from: '/path/from/file', to: '/path/to'}
     options: {  // loader options
 
@@ -38,30 +45,22 @@ const config = fp
 module.exports = config;
 ```
 
-## preset
+## Preset
 
 ... todo
 
-- standard: ['common','style','typescript','babel','html','server','copy','sprite','develop|production']
-- dll: ['common','typescript','babel','dll']
-- angular: ['common','style','typescript','babel','html','server','copy','develop|production','angular']
+- @frontpack/@preset-angular
+- @frontpack/@preset-babel
+- @frontpack/@preset-common
+- @frontpack/@preset-copy
+- @frontpack/@preset-dll
+- @frontpack/@preset-html
+- @frontpack/@preset-server
+- @frontpack/@preset-sprite
+- @frontpack/@preset-style
+- @frontpack/@preset-typescript
 
-## partial
-
-... todo
-
-- angular
-- babel
-- common
-- copy
-- develop
-- dll
-- html
-- production
-- server
-- sprite
-- style
-- typescript
+## Examples
 
 ## API
 
@@ -77,15 +76,7 @@ frontpack.export
 
 frontpack.strategy
 
-frontpack.removePlugin
-
-frontpack.load
-
 ## Custom preset
-
-... todo
-
-## Custom partial
 
 ... todo
 
@@ -94,5 +85,4 @@ frontpack.load
 
 - update documentation
 - preset package
-- partial package
-- preset for react
+- add examples
