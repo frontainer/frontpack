@@ -53,7 +53,7 @@ module.exports = function (options = {}) {
             sourceMap: true,
             includePaths: [
               path.join(process.cwd(), 'node_modules'),
-              path.join(process.cwd(), './src/assets/css'),
+              path.join(process.cwd(), './src/assets/css')
             ]
           },
           postcss: {
@@ -68,8 +68,7 @@ module.exports = function (options = {}) {
       }),
       new ExtractTextPlugin({
         filename: 'assets/css/[name].css',
-        allChunks: true,
-        // disabled: process.env.NODE_ENV === 'production'
+        allChunks: true
       })
     ]
   };

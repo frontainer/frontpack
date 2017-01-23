@@ -9,7 +9,7 @@ const DEFAULT_OPTIONS = {
   clean: {
     path: [],
     options: {
-      root: process.cwd(),
+      root: process.cwd()
     }
   },
   uglify: {
@@ -79,6 +79,7 @@ module.exports = function (options = {}) {
         manifest: path.join(process.cwd(), 'vendor-manifest.json')
       }));
     } catch (e) {
+      console.log('Not found vendor-manifest.json');
     }
   }
   return config;
