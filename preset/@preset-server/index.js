@@ -33,7 +33,7 @@ module.exports = function(options = {}) {
       };
     }
     options.browserSync.server.middleware = options.browserSync.server.middleware || [];
-    options.browserSyncs.server.middleware.push(historyApiFallback());
+    options.browserSync.server.middleware.push(historyApiFallback());
   }
   if (options.browserSync.proxy) {
     delete options.browserSync.server;
