@@ -4,9 +4,8 @@ const frontpack = require('frontpack');
 const fp = new frontpack();
 const config = fp
   .preset([
-    'common',
-    'babel',
-    'dll'
+    'dll',
+    'babel'
   ])
   .config({
     entry: {
