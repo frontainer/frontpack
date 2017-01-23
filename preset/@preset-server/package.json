@@ -16,8 +16,5 @@
   "peerDependencies": {
     "frontpack": "*"
   },
-  "devDependencies": {
-    "browser-sync": "^2.18.6",
-    "frontpack": "file:///Users/frontainer/Documents/project/frontpack"
-  }
+  "devDependencies": {}
 }
