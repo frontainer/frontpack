@@ -5,8 +5,6 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const historyApiFallback = require('connect-history-api-fallback');
 const DEFAULT_OPTIONS = {
   browserSync: {
-    host: 'localhost',
-    port: 3000,
     server: {
       baseDir: 'public',
       middleware: []
@@ -29,7 +27,6 @@ module.exports = function(options = {}) {
   options = webpackMerge({},DEFAULT_OPTIONS,options);
   if (options.historyApiFallback) {
     if (typeof options.browserSync.server === 'string') {
-      let baseDir = options.browserSync.server;
       options.browserSync.server = {
         baseDir: [options.browserSync.server],
         middleware: []
