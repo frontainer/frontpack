@@ -8,7 +8,8 @@ const DEFAULT_OPTIONS = {
     host: 'localhost',
     port: 3000,
     server: {
-      baseDir: 'public'
+      baseDir: 'public',
+      middleware: []
     },
     watchOptions: {
       ignoreInitial: true,
@@ -27,6 +28,12 @@ const DEFAULT_OPTIONS = {
 module.exports = function(options = {}) {
   options = webpackMerge({},DEFAULT_OPTIONS,options);
   if (options.historyApiFallback) {
+    if (typeof options.server === 'string') {
+      options.server = {
+        baseDir: options.server,
+        middleware: []
+      };
+    }
     options.server.middleware = options.server.middleware || [];
     options.server.middleware.push(historyApiFallback());
   }
