@@ -47,7 +47,7 @@ module.exports = function (options = {}) {
       hints: false
     },
     plugins: [
-      new webpack.NoErrorsPlugin(),
+      new webpack.NoEmitOnErrorsPlugin(),
       new webpack.DefinePlugin({
         'process.env': {
           'NODE_ENV': JSON.stringify(env)
