@@ -3,7 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-
+const ProgressPlugin = require('webpack/lib/ProgressPlugin');
 const DEFAULT_OPTIONS = {
   outputPath: 'public',
   clean: {
@@ -39,7 +39,11 @@ module.exports = function (options = {}) {
         path.join(process.cwd(), 'node_modules')
       ]
     },
-    stats: 'minimal',
+    stats: {
+      assets: false,
+      modules: false,
+      children: false,
+    },
     watchOptions: {
       ignored: /node_modules/
     },
@@ -53,6 +57,7 @@ module.exports = function (options = {}) {
           'NODE_ENV': JSON.stringify(env)
         }
       }),
+      new ProgressPlugin({profile:options.verbose, colors: true }),
       new webpack.LoaderOptionsPlugin({
         options: {
           context: process.cwd(),
