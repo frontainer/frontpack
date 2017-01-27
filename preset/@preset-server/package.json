@@ -10,8 +10,8 @@
   "license": "MIT",
   "dependencies": {
     "browser-sync": "2.18.6",
-    "browser-sync-webpack-plugin": "^1.1.3",
-    "connect-history-api-fallback": "^1.3.0"
+    "browser-sync-webpack-plugin": "1.1.3",
+    "connect-history-api-fallback": "1.3.0"
   },
   "peerDependencies": {
     "frontpack": "*"
