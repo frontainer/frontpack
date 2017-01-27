@@ -6,6 +6,7 @@ const config = fp
   .preset([
     'common',
     'typescript',
+    'angular',
     'dll'
   ])
   .config({
@@ -13,9 +14,6 @@ const config = fp
       vendor: ['./src/vendor']
     }
   }).option({
-    babel: {
-      lint: false
-    },
     typescript: {
       lint: false
     },
