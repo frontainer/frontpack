@@ -9,7 +9,8 @@
   "author": "frontainer",
   "license": "MIT",
   "dependencies": {
-    "clean-webpack-plugin": "0.1.15"
+    "clean-webpack-plugin": "0.1.15",
+    "progress-bar-webpack-plugin": "^1.9.3"
   },
   "peerDependencies": {
     "frontpack": "*"

@@ -3,6 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const DEFAULT_OPTIONS = {
   outputPath: 'public',
   clean: {
@@ -50,6 +51,7 @@ module.exports = function (options = {}) {
       hints: false
     },
     plugins: [
+      new ProgressBarPlugin(),
       new webpack.NoEmitOnErrorsPlugin(),
       new webpack.DefinePlugin({
         'process.env': {
