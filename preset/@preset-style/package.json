@@ -18,7 +18,9 @@
     "query-string": "4.3.1",
     "raw-loader": "0.5.1",
     "sass-loader": "4.1.1",
-    "style-loader": "0.13.1"
+    "style-loader": "0.13.1",
+    "stylelint": "^7.7.1",
+    "stylelint-webpack-plugin": "^0.5.1"
   },
   "peerDependencies": {
     "frontpack": "*"

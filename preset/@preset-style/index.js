@@ -4,9 +4,9 @@ const path = require('path');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const queryString = require('query-string');
 const autoprefixer = require('autoprefixer');
-
 const DEFAULT_OPTIONS = {
   sass: {
     sourceMap: true,
@@ -16,8 +16,11 @@ const DEFAULT_OPTIONS = {
     url: true
   },
   file: {
-    name : '[path][name].[ext]',
+    name: '[path][name].[ext]',
     context: './src'
+  },
+  stylelint: {
+    quiet: true
   }
 };
 
@@ -25,7 +28,7 @@ module.exports = function (options = {}) {
   options = webpackMerge({}, DEFAULT_OPTIONS, options);
   let cssQuery = queryString.stringify(options.sass);
   let fileQuery = queryString.stringify(options.file);
-  return {
+  const config = {
     module: {
       rules: [
         {
@@ -72,4 +75,8 @@ module.exports = function (options = {}) {
       })
     ]
   };
+  if (options.stylelint) {
+    config.plugins.push(new StyleLintPlugin(options.stylelint));
+  }
+  return config;
 };
