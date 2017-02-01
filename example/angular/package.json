@@ -51,6 +51,7 @@
     "stylelint-config-standard": "^15.0.1",
     "ts-node": "2.0.0",
     "tslint": "^4.4.2",
+    "tslint-stylish": "^2.1.0-beta",
     "webpack": "2.2.0"
   }
 }
