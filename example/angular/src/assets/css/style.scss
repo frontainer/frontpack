@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-@import '~font-awesome/css/font-awesome.css';
 @import 'setting';
 //@import 'base/sanitize';
 //@import 'base/reset';
@@ -8,11 +7,6 @@
 @import 'base/mixin';
 @import 'base/base';
 @import 'layout/layout';
-@import 'sprites/sprites';
-
-.icon10-home {
-  @include sprite($web-navigation-line-craft-1-109681);
-}
 
 body {
   background: #fff000;

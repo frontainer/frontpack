@@ -17,6 +17,9 @@
     "noEmit": false,
     "removeComments": false,
     "noImplicitAny": false,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitThis": true,
     "suppressImplicitAnyIndexErrors": true
   },
   "compileOnSave": true,

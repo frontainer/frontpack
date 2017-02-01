@@ -2,8 +2,10 @@
 // Generated on Tue Jan 10 2017 16:08:44 GMT+0900 (JST)
 
 const webpackConfig = Object.assign({},require('./webpack.config'));
-delete webpackConfig.entry;
 delete webpackConfig.output;
+webpackConfig.plugins = webpackConfig.plugins.filter((plugin) => {
+  return (plugin.constructor.name !== 'BrowserSyncPlugin')
+});
 module.exports = function(config) {
   config.set({
 
@@ -53,7 +55,7 @@ module.exports = function(config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['PhantomJS'],
-
+    nightmareOptions: {},
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: true,
