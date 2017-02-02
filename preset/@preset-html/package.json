@@ -9,10 +9,11 @@
   "author": "frontainer",
   "license": "MIT",
   "dependencies": {
-    "html-webpack-plugin": "2.26.0",
-    "html-loader": "0.4.4",
     "ejs": "2.5.5",
-    "ejs-compiled-loader": "2.2.0"
+    "ejs-compiled-loader": "2.2.0",
+    "html-loader": "0.4.4",
+    "html-webpack-plugin": "2.26.0",
+    "preload-webpack-plugin": "1.0.0"
   },
   "peerDependencies": {
     "frontpack": "*"
