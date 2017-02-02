@@ -42,7 +42,7 @@ module.exports = function (options = {}) {
     stats: {
       assets: false,
       modules: false,
-      children: false,
+      children: false
     },
     watchOptions: {
       ignored: /node_modules/
