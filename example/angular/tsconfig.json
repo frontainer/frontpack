@@ -16,8 +16,8 @@
     "sourceMap": true,
     "noEmit": false,
     "removeComments": false,
-    "noImplicitAny": false,
-    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "noUnusedParameters": false,
     "noUnusedLocals": true,
     "noImplicitThis": true,
     "suppressImplicitAnyIndexErrors": true
