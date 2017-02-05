@@ -35,13 +35,21 @@ module.exports = function (options = {}) {
           test: /\.s(c|a)ss$/,
           exclude: /(node_modules|\.component\.scss)/,
           loader: ExtractTextPlugin.extract({
-            fallbackLoader: 'style-loader',
-            loader: [
+            fallback: 'style-loader',
+            use: [
               `css-loader?${cssQuery}`, // CSS Moduleの場合 &modules をつける
               'postcss-loader',
               'sass-loader'
             ]
           })
+        },
+        {
+          test: /\.component\.s(a|c)ss$/,
+          loaders: [
+            'raw-loader',
+            'postcss-loader',
+            'sass-loader'
+          ]
         },
         {
           test: /\.(ttf|woff2?|eot|svg|gif|jpg|png)$/,

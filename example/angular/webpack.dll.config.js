@@ -5,7 +5,6 @@ const fp = new frontpack();
 const config = fp
   .preset([
     'common',
-    'typescript',
     'angular',
     'dll'
   ])

@@ -9,10 +9,9 @@ const config = fp
   .preset([
     'common',
     'style',
-    'typescript',
+    'angular',
     'html',
     'copy',
-    'angular',
     'server'
   ])
   .config({
