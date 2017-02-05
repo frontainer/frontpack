@@ -1,7 +1,6 @@
 example
 publish
 preset
-publish.js
-check.js
-install.js
+Makefile
+tools
 .idea

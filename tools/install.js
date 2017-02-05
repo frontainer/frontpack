@@ -2,4 +2,4 @@
 
 'use strict';
 
-require('./publish/install');
+require('./lib/install');

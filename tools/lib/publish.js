@@ -1,7 +1,7 @@
-const whoami = require('./whoami');
 const getDirs = require('./getDirs');
-const update = require('./update');
-const publish = require('./publish');
+const whoami = require('./npm/whoami');
+const update = require('./npm/update');
+const publish = require('./npm/publish');
 
 const argv = process.argv;
 const VERSIONS = [

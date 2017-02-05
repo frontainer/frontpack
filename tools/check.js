@@ -2,4 +2,4 @@
 
 'use strict';
 
-require('./publish/check');
+require('./lib/check');

@@ -2,4 +2,4 @@
 
 'use strict';
 
-require('./publish/index');
+require('./lib/index');
