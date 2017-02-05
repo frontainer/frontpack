@@ -23,6 +23,7 @@ const DEFAULT_OPTIONS = {
 module.exports = function (options = {}) {
   const env = process.env.NODE_ENV || 'development';
   options = webpackMerge({}, DEFAULT_OPTIONS, options);
+  const ignore = new RegExp(`node_modules|${options.outputPath}`);
   const config = {
     devtool: '#source-map',
     output: {
@@ -45,7 +46,7 @@ module.exports = function (options = {}) {
       children: false
     },
     watchOptions: {
-      ignored: /node_modules/
+      ignored: ignore
     },
     performance: {
       hints: false
