@@ -2,4 +2,6 @@ example
 publish
 preset
 publish.js
+check.js
+install.js
 .idea
