@@ -16,7 +16,7 @@ const DEFAULT_OPTIONS = {
     url: true
   },
   file: {
-    name: '[path][name].[ext]',
+    name: 'assets/[hash][name].[ext]',
     context: './src'
   },
   stylelint: {
