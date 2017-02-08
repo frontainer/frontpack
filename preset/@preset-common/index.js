@@ -71,9 +71,13 @@ module.exports = function (options = {}) {
   };
 
   if (env === 'production') { // for production
-    options.clean.path.push(options.outputPath);
+    if (options.clean !== false) {
+      if (options.clean.path.length === 0) {
+        options.clean.path.push(options.outputPath);
+      }
+      config.plugins.push(new CleanWebpackPlugin(options.clean.path, options.clean.options));
+    }
     config.plugins.push(
-      new CleanWebpackPlugin(options.clean.path, options.clean.options),
       new webpack.optimize.AggressiveMergingPlugin(),
       new webpack.optimize.UglifyJsPlugin(options.uglify)
     );
