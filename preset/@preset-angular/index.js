@@ -18,7 +18,7 @@ module.exports = function(options) {
         {
           test: /\.tsx?$/,
           loaders: [
-            'awesome-typescript-loader?useWebpackText&useBabel&useCache&silent',
+            'awesome-typescript-loader?useWebpackText',
             'angular2-template-loader',
             `angular2-router-loader?aot=${USE_AOT}&genDir=${options.genDir}`
           ]

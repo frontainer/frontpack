@@ -12,7 +12,7 @@ module.exports = function(options = {}) {
       rules: [
         {
           test: /\.ts/,
-          loader: 'awesome-typescript-loader?useWebpackText&useBabel&useCache&silent'
+          loader: 'awesome-typescript-loader?useWebpackText'
         }
       ]
     },
