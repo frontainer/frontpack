@@ -9,14 +9,6 @@
         ]
       }
     ],
-    "declaration-empty-line-before": "never",
-    "rule-empty-line-before": [
-      "always", {
-        "ignore": [
-          "inside-block",
-          "after-comment"
-        ]
-      }
-    ]
+    "declaration-empty-line-before": "never"
   }
 }
