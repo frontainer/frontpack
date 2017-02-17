@@ -9,8 +9,9 @@
   "author": "frontainer",
   "license": "MIT",
   "dependencies": {
-    "angular2-router-loader": "0.3.4",
-    "angular2-template-loader": "0.6.0"
+    "angular-router-loader": "0.5.0",
+    "angular2-template-loader": "0.6.0",
+    "ngc-webpack": "1.2.0"
   },
   "peerDependencies": {
     "frontpack": "*"
