@@ -9,7 +9,7 @@ const DEFAULT_OPTIONS = {
     emitErrors: true,
     failOnHint: true
   },
-  genDir: 'src/aot-compiled/src/app',
+  genDir: 'src/aot-compiled',
   ngc: {
     tsConfig: process.cwd() + '/tsconfig.json'
   }
