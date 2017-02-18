@@ -8,8 +8,7 @@
   },
   "author": "frontainer",
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "peerDependencies": {
     "frontpack": "*"
   }
