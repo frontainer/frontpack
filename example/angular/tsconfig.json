@@ -22,9 +22,8 @@
     "noImplicitThis": true,
     "suppressImplicitAnyIndexErrors": true
   },
-  "compileOnSave": true,
+  "compileOnSave": false,
   "files": [
-    "src/vendor.ts",
     "src/main.ts"
   ],
   "include": [
@@ -41,7 +40,6 @@
   },
   "angularCompilerOptions": {
     "genDir": "src/aot-compiled",
-    "skipMetadataEmit" : true,
-    "debug": true
+    "skipMetadataEmit" : true
   }
 }

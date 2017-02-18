@@ -33,6 +33,13 @@
   },
   "devDependencies": {
     "@angular/compiler-cli": "2.4.6",
+    "@frontpack/frontpack-preset-angular": "file:../../preset/@preset-angular",
+    "@frontpack/frontpack-preset-common": "file:../../preset/@preset-common",
+    "@frontpack/frontpack-preset-dll": "file:../../preset/@preset-dll",
+    "@frontpack/frontpack-preset-html": "file:../../preset/@preset-html",
+    "@frontpack/frontpack-preset-style": "file:../../preset/@preset-style",
+    "@frontpack/frontpack-preset-server": "file:../../preset/@preset-server",
+    "@frontpack/frontpack-preset-copy": "file:../../preset/@preset-copy",
     "@types/jasmine": "2.5.41",
     "@types/node": "7.0.5",
     "codelyzer": "2.0.0-beta.4",
