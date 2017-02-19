@@ -161,3 +161,6 @@ angular(2.x)を使った開発のためのテンプレート
 ## ToDo
 
 - update documentation
+- unit testing
+- preset-react
+- preset-vue
