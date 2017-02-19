@@ -20,6 +20,6 @@ module.exports = function(list,type) {
   let promises = list.map((name) => {
     return publish(name);
   });
-  promises.push(update('.', type));
+  promises.push(publish('.', type));
   return Promise.all(promises);
 };
