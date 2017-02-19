@@ -2,7 +2,7 @@
 
 webpack configuration helper and presets.
 
-** This package is beta version **
+__This package is beta version__
 
 # Usage
 
@@ -22,12 +22,12 @@ const fp = new frontpack({
 
 const config = fp
   .preset([
-    'common',
-    'babel',
-    'style',
-    'server',
-    // './my-preset/my.js',
-    // 'frontpack-external-preset'
+    'common',  // use @frontpack/preset-common
+    'babel',   // use @frontpack/preset-babel
+    'style',   // use @frontpack/preset-style
+    'server',  // use @frontpack/preset-server
+    // './my-preset/my.js',    // local config
+    // 'frontpack-external-preset'  // external package
   ])   // load from preset
   .config({ // your webpack config
     entry: {
@@ -41,30 +41,94 @@ const config = fp
     options: {  // loader options
 
     }
-  }).export();  // export webpack config object!!
+  }).export();  // export webpack config object
 module.exports = config;
 ```
 
 ## Preset
 
-... todo
+### preset-common
 
-- @frontpack/@preset-angular
-- @frontpack/@preset-babel
-- @frontpack/@preset-common
-- @frontpack/@preset-copy
-- @frontpack/@preset-dll
-- @frontpack/@preset-html
-- @frontpack/@preset-server
-- @frontpack/@preset-sprite
-- @frontpack/@preset-style
-- @frontpack/@preset-typescript
+基本設定をまとめたプリセット
+ 
+```
+npm i -D @frontpack/@preset-common
+```
+
+### preset-babel
+
+babelを使うためのプリセット
+ 
+```
+npm i -D @frontpack/@preset-babel
+```
+
+### preset-typescript
+
+typescriptを使うためのプリセット
+ 
+```
+npm i -D @frontpack/@preset-typescript
+```
+
+### preset-html
+
+HTMLを生成するためのプリセット
+ 
+```
+npm i -D @frontpack/@preset-html
+```
+
+### preset-style
+
+SASS/CSSをビルドして生成するためのプリセット
+ 
+```
+npm i -D @frontpack/@preset-style
+```
+
+### preset-sprite
+
+複数の画像からスプライト画像とscssを生成するためのプリセット
+ 
+```
+npm i -D @frontpack/@preset-sprite
+```
+
+### preset-dll
+
+簡単にDLLファイルを生成するためのプリセット
+
+- 要 preset-common 
+
+```
+npm i -D @frontpack/@preset-dll
+```
+
+### preset-server
+
+開発用サーバーを立ち上げるプリセット
+
+- 要 preset-common 
+
+```
+npm i -D @frontpack/@preset-server
+```
+
+### preset-angular
+
+- 要 preset-html 
+- 要 preset-style 
+
+angular(2.x)のためのプリセット
+ 
+```
+npm i -D @frontpack/@preset-angular
+```
 
 ## Examples
 
 ## API
-
-... todo
 
 frontpack.preset
 
@@ -76,13 +140,24 @@ frontpack.export
 
 frontpack.strategy
 
+- document coming soon...
+
 ## Custom preset
 
-... todo
+- document coming soon...
 
+## Examples
+
+### frontpack-example-standard
+
+Babelを使った汎用Web制作テンプレート
+[frontpack-example-standard](https://github.com/frontainer/frontpack-example-standard) 
+
+### frontpack-example-angular
+
+angular(2.x)を使った開発のためのテンプレート
+[frontpack-example-angular](https://github.com/frontainer/frontpack-example-angular) 
 
 ## ToDo
 
 - update documentation
-- preset package
-- add examples
