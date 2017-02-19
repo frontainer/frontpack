@@ -12,6 +12,6 @@
     "webpack-spritesmith": "0.3.1"
   },
   "peerDependencies": {
-    "frontpack": "*"
+    "@frontpack/frontpack": "0.x"
   }
 }

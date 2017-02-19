@@ -14,7 +14,7 @@
     "connect-history-api-fallback": "1.3.0"
   },
   "peerDependencies": {
-    "frontpack": "*"
+    "@frontpack/frontpack": "0.x"
   },
   "devDependencies": {}
 }

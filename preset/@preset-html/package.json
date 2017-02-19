@@ -16,6 +16,6 @@
     "preload-webpack-plugin": "^1.1.0"
   },
   "peerDependencies": {
-    "frontpack": "*"
+    "@frontpack/frontpack": "0.x"
   }
 }

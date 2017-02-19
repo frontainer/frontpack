@@ -23,6 +23,6 @@
     "stylelint-webpack-plugin": "^0.6.0"
   },
   "peerDependencies": {
-    "frontpack": "*"
+    "@frontpack/frontpack": "0.x"
   }
 }

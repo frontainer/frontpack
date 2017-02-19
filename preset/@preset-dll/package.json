@@ -10,6 +10,6 @@
   "license": "MIT",
   "dependencies": {},
   "peerDependencies": {
-    "frontpack": "*"
+    "@frontpack/frontpack": "0.x"
   }
 }

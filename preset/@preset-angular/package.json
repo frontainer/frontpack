@@ -17,6 +17,6 @@
     "typescript": "^2.1.6"
   },
   "peerDependencies": {
-    "frontpack": "*"
+    "@frontpack/frontpack": "0.x"
   }
 }
