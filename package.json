@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "changelog": "conventional-changelog -p eslint -i CHANGELOG.md -w -s -r 0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
