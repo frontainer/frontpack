@@ -21,6 +21,10 @@ const DEFAULT_OPTIONS = {
   },
   stylelint: {
     quiet: true
+  },
+  css: {
+    filename: 'assets/css/[name].css',
+    allChunks: true
   }
 };
 
@@ -77,10 +81,7 @@ module.exports = function (options = {}) {
           }
         }
       }),
-      new ExtractTextPlugin({
-        filename: 'assets/css/[name].css',
-        allChunks: true
-      })
+      new ExtractTextPlugin(options.css)
     ]
   };
   if (options.stylelint) {
