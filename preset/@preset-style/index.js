@@ -32,8 +32,8 @@ module.exports = function (options = {}) {
     module: {
       rules: [
         {
-          test: /\.s(c|a)ss$/,
-          exclude: /(node_modules|\.component\.scss)/,
+          test: /\.s?(c|a)ss$/,
+          exclude: /\.component\.s?(a|c)ss$/,
           loader: ExtractTextPlugin.extract({
             fallback: 'style-loader',
             use: [
@@ -44,7 +44,7 @@ module.exports = function (options = {}) {
           })
         },
         {
-          test: /\.component\.s(a|c)ss$/,
+          test: /\.component\.s?(a|c)ss$/,
           loaders: [
             'raw-loader',
             'postcss-loader',
