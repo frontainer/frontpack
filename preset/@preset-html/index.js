@@ -36,12 +36,10 @@ module.exports = function (options = {}) {
       rules: [
         {
           test: /\.html$/,
-          exclude: /node_modules/,
           loader: 'html-loader'
         },
         {
           test: /\.ejs$/,
-          exclude: /node_modules/,
           loader: 'ejs-compiled-loader'
         }
       ]
