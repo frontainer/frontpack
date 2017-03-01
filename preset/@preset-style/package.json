@@ -13,9 +13,9 @@
   "author": "frontainer",
   "license": "MIT",
   "dependencies": {
-    "autoprefixer": "6.7.5",
+    "autoprefixer": "6.7.6",
     "css-loader": "0.26.2",
-    "extract-text-webpack-plugin": "2.0.0-rc.3",
+    "extract-text-webpack-plugin": "2.0.0",
     "file-loader": "0.10.1",
     "node-sass": "4.5.0",
     "postcss-loader": "1.3.2",
