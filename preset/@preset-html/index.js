@@ -30,7 +30,14 @@ module.exports = function (options = {}) {
     return new HtmlWebpackPlugin(file);
   });
   plugins.push(new PreloadWebpackPlugin(op.preload));
-
+  plugins.push(new webpack.LoaderOptionsPlugin({
+    options: {
+      htmlLoader: {
+        removeAttributeQuotes: false, // quote取ると:や/がattributeに使えなくなる
+        caseSensitive: true // ngIfがngifにされてしまうので
+      }
+    }
+  });
   return {
     module: {
       rules: [
