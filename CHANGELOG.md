@@ -1,9 +1,11 @@
-<a name="0.0.5"></a>
-## [0.0.5](https://github.com/frontainer/frontpack/compare/v0.0.4...v0.0.5) (2017-03-02)
+<a name="0.0.6"></a>
+## [0.0.6](https://github.com/frontainer/frontpack/compare/v0.0.4...v0.0.6) (2017-03-02)
 
 
 ### fix
 
+* @preset-html syntax error ([0fdba9b3d553ba39a9d9db1268fa417f428abecd](https://github.com/frontainer/frontpack/commit/0fdba9b3d553ba39a9d9db1268fa417f428abecd))
+* @preset-html webpack参照漏れ ([294922eb2b03f7298e9b1c98e6089cedac336212](https://github.com/frontainer/frontpack/commit/294922eb2b03f7298e9b1c98e6089cedac336212))
 * ExtractTextPluginのオプションをconfigで設定できるように ([79fca87af7efd386ca33e9d5d772608dabf03d41](https://github.com/frontainer/frontpack/commit/79fca87af7efd386ca33e9d5d772608dabf03d41))
 * html-loaderのminifyで影響が大きいremoveAttributeQuotesとcaseSensitiveをデフォルトで無効化 ([e67ffb163cc5fa8d55aa6b057d667af4dd1f17e2](https://github.com/frontainer/frontpack/commit/e67ffb163cc5fa8d55aa6b057d667af4dd1f17e2))
 * presets install commands ([f38e2b90f1e43f5dd5399d4b663883e2a152c57a](https://github.com/frontainer/frontpack/commit/f38e2b90f1e43f5dd5399d4b663883e2a152c57a))
