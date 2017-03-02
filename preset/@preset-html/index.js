@@ -37,7 +37,7 @@ module.exports = function (options = {}) {
         caseSensitive: true // ngIfがngifにされてしまうので
       }
     }
-  });
+  }));
   return {
     module: {
       rules: [
