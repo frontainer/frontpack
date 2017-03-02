@@ -1,5 +1,6 @@
 'use strict';
 
+const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
