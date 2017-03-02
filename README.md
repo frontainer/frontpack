@@ -52,7 +52,7 @@ module.exports = config;
 基本設定をまとめたプリセット
  
 ```
-npm i -D @frontpack/@preset-common
+npm i -D @frontpack/frontpack-preset-common
 ```
 
 ### preset-babel
@@ -60,7 +60,7 @@ npm i -D @frontpack/@preset-common
 babelを使うためのプリセット
  
 ```
-npm i -D @frontpack/@preset-babel
+npm i -D @frontpack/frontpack-preset-babel
 ```
 
 ### preset-typescript
@@ -68,7 +68,7 @@ npm i -D @frontpack/@preset-babel
 typescriptを使うためのプリセット
  
 ```
-npm i -D @frontpack/@preset-typescript
+npm i -D @frontpack/frontpack-preset-typescript
 ```
 
 ### preset-html
@@ -76,7 +76,7 @@ npm i -D @frontpack/@preset-typescript
 HTMLを生成するためのプリセット
  
 ```
-npm i -D @frontpack/@preset-html
+npm i -D @frontpack/frontpack-preset-html
 ```
 
 ### preset-style
@@ -84,7 +84,7 @@ npm i -D @frontpack/@preset-html
 SASS/CSSをビルドして生成するためのプリセット
  
 ```
-npm i -D @frontpack/@preset-style
+npm i -D @frontpack/frontpack-preset-style
 ```
 
 ### preset-sprite
@@ -92,7 +92,7 @@ npm i -D @frontpack/@preset-style
 複数の画像からスプライト画像とscssを生成するためのプリセット
  
 ```
-npm i -D @frontpack/@preset-sprite
+npm i -D @frontpack/frontpack-preset-sprite
 ```
 
 ### preset-dll
@@ -102,7 +102,7 @@ npm i -D @frontpack/@preset-sprite
 - 要 preset-common 
 
 ```
-npm i -D @frontpack/@preset-dll
+npm i -D @frontpack/frontpack-preset-dll
 ```
 
 ### preset-server
@@ -112,7 +112,7 @@ npm i -D @frontpack/@preset-dll
 - 要 preset-common 
 
 ```
-npm i -D @frontpack/@preset-server
+npm i -D @frontpack/frontpack-preset-server
 ```
 
 ### preset-angular
@@ -123,7 +123,7 @@ npm i -D @frontpack/@preset-server
 angular(2.x)のためのプリセット
  
 ```
-npm i -D @frontpack/@preset-angular
+npm i -D @frontpack/frontpack-preset-angular
 ```
 
 ## Examples
