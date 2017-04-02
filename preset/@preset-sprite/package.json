@@ -13,7 +13,7 @@
   "author": "frontainer",
   "license": "MIT",
   "dependencies": {
-    "webpack-spritesmith": "0.3.1"
+    "webpack-spritesmith": "^0.3.3"
   },
   "peerDependencies": {
     "@frontpack/frontpack": "0.x"
