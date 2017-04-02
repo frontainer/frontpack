@@ -38,6 +38,10 @@ module.exports = function(options) {
       new webpack.ContextReplacementPlugin(
         /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
         process.cwd()
+      ),
+      new webpack.ContextReplacementPlugin(
+        /angular(\\|\/)core(\\|\/)@angular/,
+        process.cwd()
       )
     ]
   };
