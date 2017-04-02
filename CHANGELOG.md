@@ -1,11 +1,44 @@
+<a name="0.0.7"></a>
+## [0.0.7](https://github.com/frontainer/frontpack/compare/v0.0.6...v0.0.7) (2017-04-02)
+
+
+### new
+
+* avoid ng4 warning ([ac8f33686abd4db49f223a2a8a30d5a7005bea9e](https://github.com/frontainer/frontpack/commit/ac8f33686abd4db49f223a2a8a30d5a7005bea9e))
+
+### update
+
+* @preset-angular packages ([ebe816f3e1beb46004ef1c8095465a0fa082985f](https://github.com/frontainer/frontpack/commit/ebe816f3e1beb46004ef1c8095465a0fa082985f))
+* @preset-babel packages ([4f4ec1ffc46e33d008df011dc1115372dda8e306](https://github.com/frontainer/frontpack/commit/4f4ec1ffc46e33d008df011dc1115372dda8e306))
+* @preset-common packages ([c09ddbcf448ef66fd58a63499043ae28312f48e6](https://github.com/frontainer/frontpack/commit/c09ddbcf448ef66fd58a63499043ae28312f48e6))
+* @preset-copy packages ([76ede8b27d474e701313ae4fe7b7535b89a4da8f](https://github.com/frontainer/frontpack/commit/76ede8b27d474e701313ae4fe7b7535b89a4da8f))
+* @preset-html ejs-compiled-loader to 2.2.0 ([cfbc96884f58dbc520cd008f711379536cc62d05](https://github.com/frontainer/frontpack/commit/cfbc96884f58dbc520cd008f711379536cc62d05))
+* @preset-html packages ([8f037d381197516da349a03883b338a9d4fabb25](https://github.com/frontainer/frontpack/commit/8f037d381197516da349a03883b338a9d4fabb25))
+* @preset-server packages ([a0983f2569762a6e9c46b568d1e9ba710567a8b9](https://github.com/frontainer/frontpack/commit/a0983f2569762a6e9c46b568d1e9ba710567a8b9))
+* @preset-sprite packages ([4f1256a3cc2515e1625bd3715d2163dce868cea7](https://github.com/frontainer/frontpack/commit/4f1256a3cc2515e1625bd3715d2163dce868cea7))
+* @preset-style packages ([f454e3148b58c328a980ed50ee3eacf23603c5fe](https://github.com/frontainer/frontpack/commit/f454e3148b58c328a980ed50ee3eacf23603c5fe))
+* @preset-typescript packages ([dbcf84fff817b14df13a6751085ec43b52ca99b7](https://github.com/frontainer/frontpack/commit/dbcf84fff817b14df13a6751085ec43b52ca99b7))
+* frontpack packages ([719e5bc02966043e26cd54ad6dc001e114f37f11](https://github.com/frontainer/frontpack/commit/719e5bc02966043e26cd54ad6dc001e114f37f11))
+
+
+
 <a name="0.0.6"></a>
-## [0.0.6](https://github.com/frontainer/frontpack/compare/v0.0.4...v0.0.6) (2017-03-02)
+## [0.0.6](https://github.com/frontainer/frontpack/compare/v0.0.5...v0.0.6) (2017-03-02)
 
 
 ### fix
 
 * @preset-html syntax error ([0fdba9b3d553ba39a9d9db1268fa417f428abecd](https://github.com/frontainer/frontpack/commit/0fdba9b3d553ba39a9d9db1268fa417f428abecd))
 * @preset-html webpack参照漏れ ([294922eb2b03f7298e9b1c98e6089cedac336212](https://github.com/frontainer/frontpack/commit/294922eb2b03f7298e9b1c98e6089cedac336212))
+
+
+
+<a name="0.0.5"></a>
+## [0.0.5](https://github.com/frontainer/frontpack/compare/v0.0.4...v0.0.5) (2017-03-02)
+
+
+### fix
+
 * ExtractTextPluginのオプションをconfigで設定できるように ([79fca87af7efd386ca33e9d5d772608dabf03d41](https://github.com/frontainer/frontpack/commit/79fca87af7efd386ca33e9d5d772608dabf03d41))
 * html-loaderのminifyで影響が大きいremoveAttributeQuotesとcaseSensitiveをデフォルトで無効化 ([e67ffb163cc5fa8d55aa6b057d667af4dd1f17e2](https://github.com/frontainer/frontpack/commit/e67ffb163cc5fa8d55aa6b057d667af4dd1f17e2))
 * presets install commands ([f38e2b90f1e43f5dd5399d4b663883e2a152c57a](https://github.com/frontainer/frontpack/commit/f38e2b90f1e43f5dd5399d4b663883e2a152c57a))
