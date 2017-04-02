@@ -13,11 +13,11 @@
   "author": "frontainer",
   "license": "MIT",
   "dependencies": {
-    "babel-core": "6.22.1",
-    "babel-loader": "6.3.2",
-    "babel-preset-es2015": "6.22.0",
-    "eslint": "3.16.1",
-    "eslint-loader": "1.6.3"
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "eslint": "^3.19.0",
+    "eslint-loader": "^1.7.1"
   },
   "peerDependencies": {
     "@frontpack/frontpack": "0.x"
