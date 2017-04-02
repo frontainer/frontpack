@@ -13,10 +13,10 @@
   "author": "frontainer",
   "license": "MIT",
   "dependencies": {
-    "awesome-typescript-loader": "3.0.8",
-    "tslint": "4.5.0",
-    "tslint-loader": "3.4.2",
-    "typescript": "2.1.6"
+    "awesome-typescript-loader": "^3.1.2",
+    "tslint": "^5.0.0",
+    "tslint-loader": "^3.4.3",
+    "typescript": "^2.2.2"
   },
   "peerDependencies": {
     "@frontpack/frontpack": "0.x"
