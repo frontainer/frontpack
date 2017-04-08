@@ -5,7 +5,7 @@ const webpackMerge = require('webpack-merge');
 const DEFAULT_OPTIONS = {
   lint: true
 };
-module.exports = function(options = {}) {
+module.exports = function(options = {}, extConfig = {}) {
   options = webpackMerge({}, DEFAULT_OPTIONS, options);
   const config = {
     module: {

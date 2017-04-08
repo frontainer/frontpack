@@ -28,7 +28,7 @@ const DEFAULT_OPTIONS = {
   }
 };
 
-module.exports = function (options = {}) {
+module.exports = function (options = {}, extConfig = {}) {
   options = webpackMerge({}, DEFAULT_OPTIONS, options);
   let cssQuery = queryString.stringify(options.sass);
   let fileQuery = queryString.stringify(options.file);

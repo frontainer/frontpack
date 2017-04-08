@@ -2,7 +2,7 @@
 
 const SpritesmithPlugin = require('webpack-spritesmith');
 
-module.exports = function (options = []) {
+module.exports = function (options = [], extConfig = {}) {
   const plugins = options.map((sprite) => {
     return new SpritesmithPlugin(sprite);
   });

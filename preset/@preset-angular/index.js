@@ -14,7 +14,7 @@ const DEFAULT_OPTIONS = {
     mainPath: './src/main.ts'
   }
 };
-module.exports = function(options) {
+module.exports = function(options = {}, extConfig = {}) {
   options = webpackMerge({}, DEFAULT_OPTIONS, options);
   const config = {
     module: {
