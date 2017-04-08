@@ -5,7 +5,6 @@ const webpackMerge = require('webpack-merge');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const DEFAULT_OPTIONS = {
-  outputPath: 'public',
   clean: {
     path: [],
     options: {
@@ -20,14 +19,16 @@ const DEFAULT_OPTIONS = {
     sourceMap: true
   }
 };
-module.exports = function (options = {}) {
+module.exports = function (options = {}, extConfig = {}) {
   const env = process.env.NODE_ENV || 'development';
   options = webpackMerge({}, DEFAULT_OPTIONS, options);
-  const ignore = new RegExp(`node_modules|${options.outputPath}`);
+
+  const outputPath = (extConfig.output && extConfig.output.path) ? extConfig.output.path : 'public';
+  const ignore = new RegExp(`node_modules|${outputPath}`);
   const config = {
     devtool: '#source-map',
     output: {
-      path: path.join(process.cwd(), options.outputPath),
+      path: path.join(process.cwd(), outputPath),
       publicPath: '/',
       filename: "assets/js/[name].js",
       jsonpFunction: 'fr',
@@ -63,7 +64,7 @@ module.exports = function (options = {}) {
         options: {
           context: process.cwd(),
           output: {
-            path: path.join(process.cwd(),options.outputPath)
+            path: path.join(process.cwd(), outputPath)
           }
         }
       })
@@ -73,7 +74,7 @@ module.exports = function (options = {}) {
   if (env === 'production') { // for production
     if (options.clean !== false) {
       if (options.clean.path.length === 0) {
-        options.clean.path.push(options.outputPath);
+        options.clean.path.push(outputPath);
       }
       config.plugins.push(new CleanWebpackPlugin(options.clean.path, options.clean.options));
     }

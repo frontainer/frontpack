@@ -14,8 +14,7 @@ const DEFAULT_OPTIONS = {
       ignored: '*.map'
     },
     files: [
-      '!**/*.map',
-      'public/**/*'
+      '!**/*.map'
     ]
   },
   historyApiFallback: false,
@@ -23,8 +22,11 @@ const DEFAULT_OPTIONS = {
     log: false
   }
 };
-module.exports = function(options = {}) {
+module.exports = function(options = {}, extConfig = {}) {
+  const outputPath = (extConfig.output && extConfig.output.path) ? extConfig.output.path : 'public';
   options = webpackMerge({},DEFAULT_OPTIONS,options);
+  options.browserSync.files.push(outputPath);
+
   if (options.historyApiFallback) {
     if (typeof options.browserSync.server === 'string') {
       options.browserSync.server = {

@@ -5,11 +5,12 @@ const webpackMerge = require('webpack-merge');
 const DEFAULT_OPTIONS = {
   outputPath: 'public'
 };
-module.exports = function(options) {
+module.exports = function(options = {}, extConfig = {}) {
+  const outputPath = (extConfig.output && extConfig.output.path) ? extConfig.output.path : 'public';
   options = webpackMerge({}, DEFAULT_OPTIONS, options);
   const config = {
     output: {
-      path: path.join(process.cwd(), options.outputPath),
+      path: path.join(process.cwd(), outputPath),
       publicPath: '/',
       filename: "assets/js/[name].js",
       jsonpFunction: 'fr',
