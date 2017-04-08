@@ -2,8 +2,6 @@
 
 webpack configuration helper and presets.
 
-__This package is beta version__
-
 # Usage
 
 ```

@@ -1,3 +1,18 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/frontainer/frontpack/compare/v1.0.1...v2.0.0) (2017-04-08)
+
+
+### breaking
+
+* html.filesを指定してもデフォルトが残ってしまうので、指定がなければデフォルトを入れるよう変更 ([60e5dc8d9176a755efe375bcc29cc11d5c594356](https://github.com/frontainer/frontpack/commit/60e5dc8d9176a755efe375bcc29cc11d5c594356))
+* option.outputPathを廃止してwebpackConfigのoutput.pathに統一 ([f97e9fc5cb5b74e7ff9c2e4bf794e2c6afba87b2](https://github.com/frontainer/frontpack/commit/f97e9fc5cb5b74e7ff9c2e4bf794e2c6afba87b2))
+
+### new
+
+* preset側でconfigで追加されたwebpackConfigを参照できるように ([d48dcd746002031052cb654ebf88f1c0c6b22ecf](https://github.com/frontainer/frontpack/commit/d48dcd746002031052cb654ebf88f1c0c6b22ecf))
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/frontainer/frontpack/compare/v1.0.0...v1.0.1) (2017-04-08)
 
