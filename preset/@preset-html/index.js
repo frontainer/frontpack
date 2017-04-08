@@ -6,13 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 const DEFAULT_OPTIONS = {
-  files: [
-    {
-      inject: true,
-      filename: 'index.html',
-      template: './src/index.ejs'
-    }
-  ],
+  files: [],
   params: {},
   preload: {
     rel: 'prefetch',
@@ -25,6 +19,15 @@ module.exports = function (options = {}) {
   const op = webpackMerge({
     params: {}
   }, DEFAULT_OPTIONS, options);
+
+  if (op.files && op.files.length === 0) {
+    op.files.push({
+      inject: true,
+      filename: 'index.html',
+      template: './src/index.ejs'
+    });
+  }
+
   const plugins = op.files.map((file) => {
     file.isProduction = (process.env.NODE_ENV === 'production');
     file.params = webpackMerge({}, file.params, op.params);
