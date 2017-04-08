@@ -1,3 +1,18 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/frontainer/frontpack/compare/v0.0.7...v1.0.0) (2017-04-08)
+
+
+### breaking
+
+* change aot build tool @ngtools/webpack from ngc-webpack ([593300097c322e34e0fc29ac07326d275d75b6e6](https://github.com/frontainer/frontpack/commit/593300097c322e34e0fc29ac07326d275d75b6e6))
+
+### update
+
+* @preset-babel babel-core to 6.24.1, babel-preset-es2015 to 6.24.1 ([bffbbf8d6ac2ed55606ae72957c21f343ff34844](https://github.com/frontainer/frontpack/commit/bffbbf8d6ac2ed55606ae72957c21f343ff34844))
+* @preset-style stylelint to 7.10.1 ([2dc81c78aee0f40888ddbd1724814a06c06a3ee5](https://github.com/frontainer/frontpack/commit/2dc81c78aee0f40888ddbd1724814a06c06a3ee5))
+
+
+
 <a name="0.0.7"></a>
 ## [0.0.7](https://github.com/frontainer/frontpack/compare/v0.0.6...v0.0.7) (2017-04-02)
 
