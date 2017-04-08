@@ -1,3 +1,13 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/frontainer/frontpack/compare/v1.0.0...v1.0.1) (2017-04-08)
+
+
+### fix
+
+* peerDependencies frontpack version to 1.x ([bd7838955eb4bc6af77ca1121aea6675a7cbe8b0](https://github.com/frontainer/frontpack/commit/bd7838955eb4bc6af77ca1121aea6675a7cbe8b0))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/frontainer/frontpack/compare/v0.0.7...v1.0.0) (2017-04-08)
 
