@@ -1,7 +1,7 @@
 'use strict';
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
-const NgcWebpack = require('ngc-webpack');
+const AotPlugin = require('@ngtools/webpack').AotPlugin;
 const USE_AOT = (process.env.NODE_ENV === 'production');
 const DEFAULT_OPTIONS = {
   lint: true,
@@ -9,9 +9,9 @@ const DEFAULT_OPTIONS = {
     emitErrors: true,
     failOnHint: true
   },
-  genDir: 'src/aot-compiled',
-  ngc: {
-    tsConfig: process.cwd() + '/tsconfig.json'
+  aot: {
+    tsConfigPath: './tsconfig.json',
+    mainPath: './src/main.ts'
   }
 };
 module.exports = function(options) {
@@ -21,11 +21,11 @@ module.exports = function(options) {
       rules: [
         {
           test: /\.tsx?$/,
-          loaders: [
-            'awesome-typescript-loader?useWebpackText',
-            'angular2-template-loader',
-            `angular-router-loader?aot=${USE_AOT}&genDir=${options.genDir}`
-          ]
+          loaders: USE_AOT ? ['@ngtools/webpack'] : [
+              'awesome-typescript-loader?useWebpackText',
+              'angular2-template-loader',
+              `angular-router-loader`
+            ]
         }
       ]
     },
@@ -47,7 +47,7 @@ module.exports = function(options) {
   };
   if (USE_AOT) {
     config.plugins.push(
-      new NgcWebpack.NgcWebpackPlugin(options.ngc)
+      new AotPlugin(options.aot)
     );
   }
   if (options.lint) {
