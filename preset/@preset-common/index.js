@@ -1,4 +1,5 @@
 'use strict';
+const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
@@ -20,7 +21,7 @@ const DEFAULT_OPTIONS = {
   }
 };
 module.exports = function (options = {}, extConfig = {}) {
-  const env = process.env.NODE_ENV || 'development';
+  const env = process.env.NODE_ENV || '';
   options = webpackMerge({}, DEFAULT_OPTIONS, options);
 
   const outputPath = (extConfig.output && extConfig.output.path) ? extConfig.output.path : 'public';
@@ -55,10 +56,8 @@ module.exports = function (options = {}, extConfig = {}) {
     plugins: [
       new ProgressBarPlugin(),
       new webpack.NoEmitOnErrorsPlugin(),
-      new webpack.DefinePlugin({
-        'process.env': {
-          'NODE_ENV': JSON.stringify(env)
-        }
+      new webpack.EnvironmentPlugin({
+        NODE_ENV: ''
       }),
       new webpack.LoaderOptionsPlugin({
         options: {
@@ -67,10 +66,14 @@ module.exports = function (options = {}, extConfig = {}) {
             path: path.join(process.cwd(), outputPath)
           }
         }
+      }),
+      new webpack.NormalModuleReplacementPlugin(/environments\/environment/, function(module) {
+        if (process.env.NODE_ENV) {
+          module.request += `.${process.env.NODE_ENV}`;
+        }
       })
     ]
-  };
-
+  }
   if (env === 'production') { // for production
     if (options.clean !== false) {
       if (options.clean.path.length === 0) {
