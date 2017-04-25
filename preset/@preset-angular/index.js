@@ -1,10 +1,13 @@
 'use strict';
 const webpack = require('webpack');
+const queryString = require('query-string');
 const webpackMerge = require('webpack-merge');
+const TsConfigPathsPlugin = require('awesome-typescript-loader').TsConfigPathsPlugin;
 const AotPlugin = require('@ngtools/webpack').AotPlugin;
-const USE_AOT = (process.env.NODE_ENV === 'production');
 const DEFAULT_OPTIONS = {
   lint: true,
+  ts: {},
+  tsConfig: {},
   tslint: {
     emitErrors: true,
     failOnHint: true
@@ -15,6 +18,7 @@ const DEFAULT_OPTIONS = {
   }
 };
 module.exports = function(options = {}, extConfig = {}) {
+  const USE_AOT = (process.env.NODE_ENV === 'production');
   options = webpackMerge({}, DEFAULT_OPTIONS, options);
   const config = {
     module: {
@@ -22,7 +26,7 @@ module.exports = function(options = {}, extConfig = {}) {
         {
           test: /\.tsx?$/,
           loaders: USE_AOT ? ['@ngtools/webpack'] : [
-              'awesome-typescript-loader?useWebpackText',
+              `awesome-typescript-loader?${queryString.stringify(options.ts)}`,
               'angular2-template-loader',
               `angular-router-loader`
             ]
@@ -30,6 +34,7 @@ module.exports = function(options = {}, extConfig = {}) {
       ]
     },
     plugins: [
+      new TsConfigPathsPlugin(options.tsConfig),
       new webpack.LoaderOptionsPlugin({
         options: {
           tslint: options.tslint
