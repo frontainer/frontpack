@@ -28,6 +28,7 @@ module.exports = function (options = {}, extConfig = {}) {
   const ignore = new RegExp(`node_modules|${outputPath}`);
   const config = {
     devtool: '#source-map',
+    context: path.join(process.cwd(),'src'),
     output: {
       path: path.join(process.cwd(), outputPath),
       publicPath: '/',
