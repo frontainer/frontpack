@@ -1,3 +1,26 @@
+<a name="3.0.0-beta.0"></a>
+# [3.0.0-beta.0](https://github.com/frontainer/frontpack/compare/v2.0.0...v3.0.0-beta.0) (2017-04-25)
+
+
+### breaking
+
+* @preset-html webpackConfig.contextを参照するように ([ee33f761a741bcdb48a6dc3410493d32a6e91a38](https://github.com/frontainer/frontpack/commit/ee33f761a741bcdb48a6dc3410493d32a6e91a38))
+* @preset-style ファイル出力時のcontextはwebpackConfig.contextに統一 ([3561398348fb2ec3064f852d09a40aab6ef10456](https://github.com/frontainer/frontpack/commit/3561398348fb2ec3064f852d09a40aab6ef10456))
+
+### new
+
+* @preset-angular awesome-typescript-loaderのオプションを渡せるように ([ac2269090b8a3adb4a730b62730888ef491d9f88](https://github.com/frontainer/frontpack/commit/ac2269090b8a3adb4a730b62730888ef491d9f88))
+* @preset-common environments/environmentを呼び出した場合にprocess.env.NODE_ENVを付与したもので振り分けされるように ([8be4f33b12ef1ad201c5be619831905a2b049990](https://github.com/frontainer/frontpack/commit/8be4f33b12ef1ad201c5be619831905a2b049990))
+* @preset-style sass-loader,postcssのオプションを設定できるように ([593b061eae7e613c506f05a651e4b6ce69e6a35f](https://github.com/frontainer/frontpack/commit/593b061eae7e613c506f05a651e4b6ce69e6a35f))
+* @preset-typescript awesome-typescript-loaderのオプションを変更できるように ([a983a555de58971e509ee5ca9cbb9f012b0165f4](https://github.com/frontainer/frontpack/commit/a983a555de58971e509ee5ca9cbb9f012b0165f4))
+* webpackからenvの値をもらえるように & process.env.NODE_ENVにenvを反映させるように ([9f28b3326d1045fab6440b4d289b03593de8ee7f](https://github.com/frontainer/frontpack/commit/9f28b3326d1045fab6440b4d289b03593de8ee7f))
+
+### update
+
+* @preset-babel babel-loader to 7.0.0 ([3437cec0929532c74b19b9e1bc557ac394355476](https://github.com/frontainer/frontpack/commit/3437cec0929532c74b19b9e1bc557ac394355476))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/frontainer/frontpack/compare/v1.0.1...v2.0.0) (2017-04-08)
 
