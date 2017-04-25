@@ -7,6 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const queryString = require('query-string');
 const autoprefixer = require('autoprefixer');
+
 const DEFAULT_OPTIONS = {
   sass: {
     sourceMap: true,
@@ -14,6 +15,20 @@ const DEFAULT_OPTIONS = {
     localIdentName: '[name]-[local]-[hash:base64:5]',
     'import': true,
     url: true
+  },
+  sassLoader: {
+    sourceMap: true,
+    includePaths: [
+      path.join(process.cwd(), 'node_modules')
+    ]
+  },
+  postcss: {
+    sourceMap: true,
+    plugins: [
+      autoprefixer({
+        browsers: ['> 3% in JP']
+      })
+    ]
   },
   file: {
     name: 'assets/[hash][name].[ext]',
@@ -28,7 +43,7 @@ const DEFAULT_OPTIONS = {
   }
 };
 
-module.exports = function (options = {}, extConfig = {}) {
+module.exports = function (options = {}) {
   options = webpackMerge({}, DEFAULT_OPTIONS, options);
   let cssQuery = queryString.stringify(options.sass);
   let fileQuery = queryString.stringify(options.file);
@@ -64,21 +79,8 @@ module.exports = function (options = {}, extConfig = {}) {
     plugins: [
       new webpack.LoaderOptionsPlugin({
         options: {
-          sassLoader: {
-            sourceMap: true,
-            includePaths: [
-              path.join(process.cwd(), 'node_modules'),
-              path.join(process.cwd(), './src/assets/css')
-            ]
-          },
-          postcss: {
-            sourceMap: true,
-            plugins: [
-              autoprefixer({
-                browsers: ['> 3% in JP']
-              })
-            ]
-          }
+          sassLoader: options.sassLoader,
+          postcss: options.postcss
         }
       }),
       new ExtractTextPlugin(options.css)
