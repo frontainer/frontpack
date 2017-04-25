@@ -3,17 +3,9 @@ const whoami = require('./npm/whoami');
 const update = require('./npm/update');
 
 const argv = process.argv;
-const VERSIONS = [
-  'patch',
-  'minor',
-  'major',
-  'premajor',
-  'preminor',
-  'prepatch'
-];
 
-if (argv.length !== 3 || VERSIONS.indexOf(argv[2]) === -1) {
-  throw new RangeError('Arguments RangeError: ./update.js [patch|minor|major|patch|preminor|prepatch|prerelease]')
+if (argv.length !== 3) {
+  throw new RangeError('Arguments RangeError: ./update.js [patch|minor|major|patch|preminor|prepatch|prerelease|<version>]')
 }
 
 const type = argv[2];
