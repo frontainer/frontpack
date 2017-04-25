@@ -31,8 +31,7 @@ const DEFAULT_OPTIONS = {
     ]
   },
   file: {
-    name: 'assets/[hash][name].[ext]',
-    context: './src'
+    name: 'assets/[hash][name].[ext]'
   },
   stylelint: {
     quiet: true
