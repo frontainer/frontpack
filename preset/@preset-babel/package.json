@@ -20,6 +20,6 @@
     "eslint-loader": "^1.7.1"
   },
   "peerDependencies": {
-    "@frontpack/frontpack": "1.x"
+    "@frontpack/frontpack": "3.x"
   }
 }

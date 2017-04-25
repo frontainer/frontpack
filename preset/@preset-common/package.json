@@ -17,6 +17,6 @@
     "progress-bar-webpack-plugin": "^1.9.3"
   },
   "peerDependencies": {
-    "@frontpack/frontpack": "1.x"
+    "@frontpack/frontpack": "3.x"
   }
 }

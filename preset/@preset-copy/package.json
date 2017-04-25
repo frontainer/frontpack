@@ -16,6 +16,6 @@
     "copy-webpack-plugin": "^4.0.1"
   },
   "peerDependencies": {
-    "@frontpack/frontpack": "1.x"
+    "@frontpack/frontpack": "3.x"
   }
 }
