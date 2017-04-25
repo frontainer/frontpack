@@ -6,7 +6,7 @@ console.log(chalk.blue('install - ./'));
 getDirs('preset').then((list) => {
   list.forEach((d) => {
     console.log(chalk.blue(`install - ${d}`));
-    execSync(`yarn install`, {
+    execSync(`yarn upgrade`, {
       cwd: d,
       stdio: 'inherit'
     })
