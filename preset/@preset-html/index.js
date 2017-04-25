@@ -24,7 +24,7 @@ module.exports = function (options = {}) {
     op.files.push({
       inject: true,
       filename: 'index.html',
-      template: './src/index.ejs'
+      template: 'index.ejs'
     });
   }
 
