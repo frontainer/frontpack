@@ -3,7 +3,7 @@ check:
 install:
 	yarn install && ./tools/install.js
 update:
-	./tools/update.js "3.0.0-beta.0"
+	./tools/update.js "3.0.0-beta.1"
 publish:
 	./tools/publish.js
 pack:
