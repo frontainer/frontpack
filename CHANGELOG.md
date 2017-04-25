@@ -1,3 +1,13 @@
+<a name="3.0.0-beta.1"></a>
+# [3.0.0-beta.1](https://github.com/frontainer/frontpack/compare/v3.0.0-beta.0...v3.0.0-beta.1) (2017-04-25)
+
+
+### new
+
+* @preset-common contextをデフォルトでsrcに指定 ([46d6619e1bc998c7c096ac7df83ef01bbcce318a](https://github.com/frontainer/frontpack/commit/46d6619e1bc998c7c096ac7df83ef01bbcce318a))
+
+
+
 <a name="3.0.0-beta.0"></a>
 # [3.0.0-beta.0](https://github.com/frontainer/frontpack/compare/v2.0.0...v3.0.0-beta.0) (2017-04-25)
 
