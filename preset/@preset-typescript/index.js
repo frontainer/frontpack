@@ -1,9 +1,16 @@
 'use strict';
-
+const queryString = require('query-string');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
+const TsConfigPathsPlugin = require('awesome-typescript-loader').TsConfigPathsPlugin;
 const DEFAULT_OPTIONS = {
-  lint: true
+  lint: true,
+  ts: {},
+  tsConfig: {},
+  tslint: {
+    emitErrors: true,
+    failOnHint: true
+  }
 };
 module.exports = function(options = {}, extConfig = {}) {
   options = webpackMerge({}, DEFAULT_OPTIONS, options);
@@ -12,17 +19,15 @@ module.exports = function(options = {}, extConfig = {}) {
       rules: [
         {
           test: /\.ts/,
-          loader: 'awesome-typescript-loader?useWebpackText'
+          loader: `awesome-typescript-loader?${queryString.stringify(options.ts)}`
         }
       ]
     },
     plugins: [
+      new TsConfigPathsPlugin(options.tsConfig),
       new webpack.LoaderOptionsPlugin({
         options: {
-          tslint: {
-            emitErrors: true,
-            failOnHint: true
-          }
+          tslint: options.tslint
         }
       })
     ]
