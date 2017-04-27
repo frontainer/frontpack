@@ -1,3 +1,14 @@
+<a name="3.0.0-beta.2"></a>
+# [3.0.0-beta.2](https://github.com/frontainer/frontpack/compare/v3.0.0-beta.1...v3.0.0-beta.2) (2017-04-27)
+
+
+### fix
+
+* @preset-common デフォルトextensionsに.cssを追加 ([c82755ab0e10e6eb6527b35ce1534e9a5bfb9ed4](https://github.com/frontainer/frontpack/commit/c82755ab0e10e6eb6527b35ce1534e9a5bfb9ed4))
+* peerDependencies warning ([aec09e065508a6458db2c3c3db253e7c97e08593](https://github.com/frontainer/frontpack/commit/aec09e065508a6458db2c3c3db253e7c97e08593))
+
+
+
 <a name="3.0.0-beta.1"></a>
 # [3.0.0-beta.1](https://github.com/frontainer/frontpack/compare/v3.0.0-beta.0...v3.0.0-beta.1) (2017-04-25)
 
