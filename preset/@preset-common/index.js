@@ -37,7 +37,7 @@ module.exports = function (options = {}, extConfig = {}) {
       library: '[name]_library'
     },
     resolve: {
-      extensions: ['.js', '.jsx', '.ts', '.tsx', '.sass', '.scss', '.ejs', '.html'],
+      extensions: ['.js', '.jsx', '.ts', '.tsx', '.sass', '.scss', '.css', '.ejs', '.html'],
       modules: [
         path.join(process.cwd(), 'src'),
         path.join(process.cwd(), 'node_modules')
