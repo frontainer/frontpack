@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "changelog": "conventional-changelog -p eslint -i CHANGELOG.md -w -s -r 0",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
   },
   "repository": {
     "type": "git",
@@ -33,10 +33,9 @@
     "espower-loader": "^1.2.2",
     "intelli-espower-loader": "1.0.1",
     "mocha": "^3.3.0",
-    "npm-check": "^5.4.0",
+    "npm-check": "^5.4.4",
     "power-assert": "1.4.2",
-    "rimraf": "^2.6.1",
-    "webpack": "^2.4.1"
+    "rimraf": "^2.6.1"
   },
   "peerDependencies": {
     "webpack": "^2"

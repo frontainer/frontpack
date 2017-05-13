@@ -8,6 +8,7 @@ if (argv.length !== 3) {
   throw new RangeError('Arguments RangeError: ./update.js [patch|minor|major|patch|preminor|prepatch|prerelease|<version>]')
 }
 
+console.log(argv);
 const type = argv[2];
 
 whoami().then(() => {
