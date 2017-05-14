@@ -26,7 +26,7 @@ module.exports = function(options = {}, extConfig = {}) {
         {
           test: /\.tsx?$/,
           loaders: USE_AOT ? ['@ngtools/webpack'] : [
-              `awesome-typescript-loader?${queryString.stringify(options.ts)}`,
+              `ts-loader?${queryString.stringify(options.ts)}`,
               'angular2-template-loader',
               `angular-router-loader`
             ]
