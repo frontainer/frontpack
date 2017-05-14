@@ -9,7 +9,9 @@ const DEFAULT_OPTIONS = {
   tsConfig: {},
   tslint: {
     emitErrors: true,
-    failOnHint: true
+    failOnHint: false,
+    typeCheck: false,
+    fix: false
   }
 };
 module.exports = function(options = {}, extConfig = {}) {

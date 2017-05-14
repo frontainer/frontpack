@@ -10,7 +10,9 @@ const DEFAULT_OPTIONS = {
   tsConfig: {},
   tslint: {
     emitErrors: true,
-    failOnHint: true
+    failOnHint: false,
+    typeCheck: false,
+    fix: false
   },
   aot: {
     tsConfigPath: './tsconfig.json',
